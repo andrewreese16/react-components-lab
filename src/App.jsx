@@ -1,5 +1,5 @@
 import WeatherData from './components/WeatherForecast/WeatherData.jsx'
-
+import "./app.css"
 const App = () => {
   const weatherForecasts = [
     {
@@ -41,14 +41,15 @@ const App = () => {
   
   return (
     <>
-  <ul>
+    <h1>Local Weather</h1>
+    <section>
     {weatherForecasts.map((weatherForecast)=>(
       <WeatherData
       key={weatherForecast.day}
       {...weatherForecast}
       />
     ))}
-  </ul>
+  </section>
 </>
   );
 }
